@@ -1,0 +1,190 @@
+.subtitle {
+    font-family: "Lucida Console", Courier, monospace;
+    /* text-align: left; */
+    color: rgb(226, 153, 43);
+    /* position: relative;
+    top: 140px;
+    left: 60px */
+    text-decoration: underline;
+  
+  }
+
+  .subtitle1 {
+    font-family: "Lucida Console", Courier, monospace;
+    /* text-align: left; */
+    color: rgb(226, 153, 43);
+    /* position: relative;
+    top: 140px;
+    left: 90px */
+  
+  }
+
+  .subtitle12 {
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: left;
+    color: rgb(226, 153, 43);
+    position: relative;
+    top: 100px;
+    left: 90px
+  
+  }
+
+  .subtitleChoose {
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: left;
+    color: rgb(226, 153, 43);
+    position: relative;
+    top: -20px;
+    left: 590px
+  
+  }
+
+  
+  .subtitle2 {
+    font-family: "Lucida Console", Courier, monospace;
+    /* text-align: center; */
+    color: rgb(226, 153, 43);
+    /* position: center; */
+    /* top: 470px;
+    left: 690px */
+    text-decoration: underline;
+  }
+
+  .subtitle21 {
+    font-family: "Lucida Console", Courier, monospace;
+    color: rgb(226, 153, 43);
+
+  }
+
+  .subtitle22 {
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: center;
+    color: rgb(226, 153, 43);
+    position: absolute;
+    top: 405px;
+    left: 720px
+  }
+  
+  .subtitle3 {
+    font-family: "Lucida Console", Courier, monospace;
+    color: rgb(226, 153, 43);
+    left: 1150%;
+    text-decoration: underline;
+  }
+
+  .subtitle31 {
+    font-family: "Lucida Console", Courier, monospace;
+    color: rgb(226, 153, 43);
+  }
+
+  .subtitle32 {
+    font-family: "Lucida Console", Courier, monospace;
+    text-align: left;
+    color: rgb(226, 153, 43);
+    position: absolute;
+    top: 405px;
+    left: 1180px
+  
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    font-size: 420%;
+    color: rgb(226, 153, 43);
+    
+  } 
+  
+  .img1 {
+    border-radius: 70%;
+    width: 300px;
+    right: 50px;
+    position: relative;
+    left: 4%;
+    top: 20%;
+  }
+  
+  .img2 {
+    border-radius: 50%;
+    width: 310px;
+    right: -50%;
+    position: relative;
+    top: 20%;
+  }
+  
+  .welcome{
+    text-align: center;
+    font-family: "Lucida Console", Courier, monospace;
+    position: absolute;
+    font-size: 200%;
+    color: rgb(226, 153, 43);
+    top: 45%;
+    left: 30%;
+  }
+  
+  .signin-page {
+    width: 360px;
+    padding: 8% 0 0;
+    position: absolute;
+    top: 38%;
+    right: 38%;
+    
+  }
+  
+  .form button{
+    width: 20%;
+    padding: 16px;
+    font-family: "Lucida Console", Courier, monospace;
+    position: fixed;
+    top: -120px;
+    left: 7px;
+    background: rgb(226, 153, 43);
+  }
+  
+  .form input{
+    width: 10%;
+    padding: 10px;
+    font-family: "Lucida Console", Courier, monospace;
+    position: relative;
+    top: 90px;
+    right: -685px;
+    background: rgb(226, 153, 43);
+    
+  }
+
+  .form select{
+    width: 10%;
+    padding: 10px;
+    font-family: "Lucida Console", Courier, monospace;
+    position: relative;
+    top: -10px;
+    right: -685px;
+    background: rgb(226, 153, 43);
+    
+  }
+  
+  .form .message {
+    font-family: "Lucidia Console", Courier, monospace;
+    font-size: 110%;
+    text-align: center;
+    position: fixed;
+    color:rgb(226, 153, 43);
+    top: 89%;
+    left: 33%;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    font-family: "Lucidia Console", Courier, monospace;
+    float: left;
+    color : #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  } 
+  
