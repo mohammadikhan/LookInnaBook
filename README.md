@@ -11,13 +11,14 @@ Refer to my project report for the design and implementation details for my appl
 4. Open up a SQL editor and copy and paste the contents in DDL.sql, DataInsert.sql and Views.sql which will create the tables, insert the sample data and gerenate the views for database respectively. Please do it in this order: create the tables from DDL.sql, insert the data from DataInsert.sql and insert the views using View.sql. Additonally you can open the SQL files in pgAdmin or some other SQL editor and run the file. Again, please do it in the order specified as before.
 5. Connect to the database on your computer by doing the following:
     - Go to lines 44-50 in index.js and you will see the following:
-    - ```const client = new Client({
-              host: "localhost",
-              user: "postgres",
-              port: 5432,
-              password: "Mohammadkhan10",
-              database: "book_store_db"
-          })
+    - ```
+    const client = new Client({
+        host: "localhost",
+        user: "postgres",
+        port: 5432,
+        password: "Mohammadkhan10",
+        database: "book_store_db"
+    })
        ```
      - Change any of the following lines such as the host, user, port number, or password in order to connect to the database on your local computer. In most cases, you would just need to change the password that will work on your local computer but if any of the parameters differ on your local computer, PLEASE change it so that you will be able to connect to the database. This is very important.
      - Once you have changed the lines in ```const client```, save the file.
