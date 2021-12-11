@@ -31,4 +31,5 @@ Refer to my project report for the design and implementation details for my appl
 10. Open up your web browser and type: http://localhost:3000
 11. The application can now be used. NOTE: the CSS is not to scale on all screen sizes and may look out of place on larger screens. Adjust your web browser window accordingly such that the application looks more adjusted/presentable. This does not have to be done and the application will still run normally but adjusting your windor will make it look better
 12. The application can now be used.
+13. ADDITIONAL NOTES: When trying to add books to the bookstore, you may not know the publisher id. For reference, you can use these as the publisher id's when attemping to add a book to the database: 567564, 568424, 567999, 236652
 
