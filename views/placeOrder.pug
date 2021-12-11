@@ -1,0 +1,50 @@
+doctype html
+// This page displays the page of placing an order
+html(lang="en")
+  head
+    title Login
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="./css/homePageStyle.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+
+      if status && user
+        a.active(href="/") Welcome back #{name}
+        a(href="/") Home
+        a(href="/yourCart") Your Cart
+        a(href="/addBook") Add Book
+        a(href="/trackOrder") Track Order
+        a(href="/reports") Reports
+        a(href="/logout") Logout
+      
+      else if status
+        a.active(href="/") Welcome back #{name}  
+        a(href="/") Home       
+        a(href="/yourCart") Your Cart
+        a(href="/trackOrder") Track Order
+        a(href="/logout") Logout
+      
+      else 
+        a.active(href="/") Home        
+        a(href="/yourCart") Your Cart
+        a(href="/login") Login
+        a(href="/register") Create an Account
+    
+
+      
+    h1 Place Order
+    .container 
+      .subtitle Enter shipping and billing information below
+      .signin-page
+        .form
+         form.search-template(action='/order' method='post')
+            input#shipping_street_number(type="number" name='shipping_street_number' placeholder="Enter your street number" required maxlength='5')
+            input#shipping_street_name(type="text" name='shipping_street_name' placeholder="Enter shipping street" required)
+            input#shipping_city(type="text" name='shipping_city' placeholder="Enter shipping city" required)
+            input#shipping_province(type="text" name='shipping_province' placeholder="Enter shipping province" required maxlength='2')
+            input#shipping_postal_code(type="text" name='shipping_postal_code' placeholder="Enter postal code" required maxlength='6')
+            input#credit_card_number(type="text" name='credit_card_number' placeholder="Enter your credit card number" required maxlength='10' minlength='10') 
+
+            button(type='submit') Complete Order

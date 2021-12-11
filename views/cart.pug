@@ -1,0 +1,53 @@
+doctype html
+// This page displays the users cart showing all the books they have curretnl
+html(lang="en")
+  head
+    title Look Inna Book
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="/css/cart.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+
+      if status && user
+        a.active() Welcome back #{name}
+        a(href="/") Home
+        a(href="/yourCart") Your Cart
+        a(href="/addBook") Add Book
+        a(href="/trackOrder") Track Order
+        a(href="/reports") Reports
+        a(href="/logout") Logout
+      
+      else if status
+        a.active() Welcome back #{name}  
+        a(href="/") Home       
+        a(href="/yourCart") Your Cart
+        a(href="/trackOrder") Track Order
+        a(href="/logout") Logout
+      
+      else 
+        a.active(href="/") Home        
+        a(href="/yourCart") Your Cart
+        a(href="/login") Login
+        a(href="/register") Create an Account
+
+      
+    h1 Your Cart
+    .container
+      .subtitle Items in your cart
+      .signin-page
+        .form
+         form.search-template(action='/order' method='get')
+            //input#text(type="text" name='searchBook' placeholder="Search for books, genre, author, ISBN" required)
+            each item in items 
+               a(href="/books/" + item.isbn).subtitle #{item.title} ($#{item.price})
+               |
+               br
+               |
+               br
+            if status   
+              button(type='submit') Place Order
+            else
+              .subtitle2 You need to be registered to order these items 
+            .subtitle3 Total Cost: $#{cost}

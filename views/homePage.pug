@@ -1,0 +1,54 @@
+doctype html
+// This page displays the homepage of the Book store
+html(lang="en")
+  head
+    title #{storeName}
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="./css/homePageStyle.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+  
+      if status && user
+        a.active() Welcome back #{name}
+        a(href="/") Home
+        a(href="/yourCart") Your Cart
+        a(href="/addBook") Add Book
+        a(href="/trackOrder") Track Order
+        a(href="/reports") Reports
+        a(href="/logout") Logout
+      
+      else if status
+        a.active() Welcome back #{name}   
+        a(href="/") Home      
+        a(href="/yourCart") Your Cart
+        a(href="/trackOrder") Track Order
+        a(href="/logout") Logout
+      
+      else 
+        a.active(href="/") Home        
+        a(href="/yourCart") Your Cart
+        a(href="/login") Login
+        a(href="/register") Create an Account
+    
+    h1 Look Inna Book
+    .container
+      .subtitle Search our store for books that you want!
+     
+      .signin-page
+        .form
+         form.search-template(action='/' method='post')
+            input.input#searchBook(type="text" name='searchBook' placeholder="Search for books, by title, genre, author, ISBN" required)
+            
+
+           
+    if books != null
+        each book in books
+          br
+          | 
+          a(href="/books/" + book.isbn).subtitle2 #{book.title}
+          |
+          br
+    
+          //- a(href="/books/" + book.isbn).subtitle2 #{book.title} by #{book.author}

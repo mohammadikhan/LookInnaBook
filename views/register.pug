@@ -1,0 +1,33 @@
+doctype html
+// This page displays the registration page
+html(lang="en")
+  head
+    title Login
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="./css/homePageStyle.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+
+      a.active(href="/") Home
+
+      
+    h1 Create an Account
+    .container 
+      .subtitle Register down below!
+      .signin-page
+        .form
+         form.search-template(action='/registerUser' method='post')
+            input#username(type="text" name='username' placeholder="Enter a username" required maxlength='50')
+            input#name(type="text" name='name' placeholder="Enter your name" required maxlength='50')
+            input#password(type="text" name='password' placeholder="Enter your password" required)
+            input#email(type="text" name='email' placeholder="Enter your email" required maxlength='60')
+            input#street_number(type="number" name='street_number' placeholder="Enter your street/apartment number" required maxlength='4')
+            input#street_name(type="text" name='street_name' placeholder="Enter your street name" required)
+            input#city(type="text" name='city' placeholder="Enter your city" required)
+            input#province(type="text" name='province' placeholder="Enter your street province (e.g ON for Ontario)" required maxlength='2')
+            input#postal_code(type="text" name='postal_code' placeholder="Enter your postal code" required maxlength='6')
+            input#is_owner(type="text" name='owner' placeholder="Are you a bookstore owner (enter 'yes' or 'no')" required)
+
+            button(type='submit') Sign Up!

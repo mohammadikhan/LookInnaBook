@@ -1,0 +1,60 @@
+doctype html
+// This page displays the page for the user to track their order
+html(lang="en")
+  head
+    title Look Inna Book
+    //link(href="/images/movieIcon.png" rel="icon")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="./css/homePageStyle.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+
+      if status && user
+        a.active() Welcome back #{name}
+        a(href="/") Home
+        a(href="/yourCart") Your Cart
+        a(href="/addBook") Add Book
+        a(href="/trackOrder") Track Order
+        a(href="/reports") Reports
+        a(href="/logout") Logout
+      
+      else if status
+        a.active() Welcome back #{name}   
+        a(href="/") Home      
+        a(href="/yourCart") Your Cart
+        a(href="/trackOrder") Track Order
+        a(href="/logout") Logout
+      
+      else 
+        a.active(href="/") Home        
+        a(href="/yourCart") Your Cart
+        a(href="/login") Login
+        a(href="/register") Create an Account
+
+      
+    h1 Track your order
+    .container
+      .subtitle Enter your order number to track your order
+      .signin-page
+        .form
+         form.search-template(action='/trackOrder' method='post')
+            input#orderNumber(type="text" name='orderNumber' placeholder="Enter order number" required)
+
+      if order != null
+        each orders in order
+          |
+          .subtitle3 Order Number: #{orders.order_number} 
+                br
+                br
+                | User: #{orders.username} 
+                br
+                br
+                | Shipped By: #{orders.shipping_company} 
+                br 
+                br
+                | Shipping to Address: #{orders.shipping_street_number} #{orders.shipping_street_name} #{orders.shipping_city} #{orders.shipping_province} #{orders.shipping_postal_code} 
+                br
+                br
+                | Delivery Status: #{orders.status} 

@@ -1,0 +1,76 @@
+doctype html
+// This page displays the book's information
+html(lang="en")
+  head
+    title Look Inna Book
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="/css/bookInfo.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+
+      if status && user
+        a.active() Welcome back #{name}
+        a(href="/") Home
+        a(href="/yourCart") Your Cart
+        a(href="/trackOrder") Track Order
+        a(href="/addBook") Add Book
+        a(href="/trackOrder") Track Order
+        a(href="/reports") Reports
+        a(href="/logout") Logout
+      
+      else if status
+        a.active() Welcome back #{name}
+        a(href="/") Home         
+        a(href="/yourCart") Your Cart
+        a(href="/trackOrder") Track Order
+        a(href="/logout") Logout
+      
+      else 
+        a.active(href="/") Home        
+        a(href="/yourCart") Your Cart
+        a(href="/login") Login
+        a(href="/register") Create an Account
+
+    
+    h1 Book Info: #{b.title}
+    .container
+      .subtitle  Title: #{b.title}
+                 |
+                 br
+                 br 
+                 |Author: #{b.author} 
+                 |
+                 br
+                 br
+                 |Genre: #{b.genre} 
+                 br
+                 br
+                 |Pages: #{b.pages}
+                 br
+                 br
+                 |Price: $#{b.price} 
+                 br
+                 br
+                 |ISBN: #{b.isbn}
+                 br
+                 br
+                 |Publishing Company: #{p}
+                 br
+                 br
+                 |Currently in stock: #{b.stock}
+  
+
+if user
+  form.search-template(action='/yourCart/' + b.isbn method='get')
+   .form 
+     button(type='submit') Add to Cart!
+  form.search-template(action='/' + b.isbn method='put')
+    .form2 
+      button(type='submit') Delete
+
+else 
+  form.search-template(action='/yourCart/' + b.isbn method='get')
+    .form 
+      button(type='submit') Add to Cart!

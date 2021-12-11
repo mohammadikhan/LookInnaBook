@@ -1,0 +1,86 @@
+doctype html
+// This page displays the reports page for owners to view the reports
+html(lang="en")
+  head
+    title Look Inna Book
+    //link(href="/images/movieIcon.png" rel="icon")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="./css/reports.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+
+      if status && user
+        a.active() Welcome back #{name}
+        a(href="/") Home
+        a(href="/yourCart") Your Cart
+        a(href="/addBook") Add Book
+        a(href="/trackOrder") Track Order
+        a(href="/reports") Reports
+        a(href="/logout") Logout
+      
+      else if status
+        a.active() Welcome back #{name}   
+        a(href="/") Home      
+        a(href="/yourCart") Your Cart
+        a(href="/logout") Logout
+      
+      else 
+        a.active(href="/") Home        
+        a(href="/yourCart") Your Cart
+        a(href="/login") Login
+        a(href="/register") Create an Account
+
+      
+    h1 Order reports
+    .container
+      .subtitleChoose Choose a time period for the reports:
+      .signin-page
+        .form
+         form.search-template(action='/movies' method='post')
+
+    div(class='container')
+      .form
+        form.search-template(action='/reports' method='post')
+          label(for='time_period') 
+          .input
+            input(type='submit' value='Submit')
+          select#time_period(name='time_period')
+            option(value='this_month') This month
+            option(value='last_month') Last month
+    
+    .subtitle Sales per Author
+    //.subtitle
+    if rows != null
+        each row in rows
+          br
+          .subtitle1 #{row.author} 
+          .subtitle1 ➡ $#{row.total_sales}  #{row.month}/#{y}
+          br
+          br
+
+    .subtitle2 Sales per Genre
+    //.subtitle2
+    if rows2 != null
+        each row in rows2
+          br
+          .subtitle21 #{row.genre} 
+          .subtitle21 ➡ $#{row.total_sales}  #{row.month}/#{y}
+          br
+          br
+
+    .subtitle3 Sales per Publishing Company (20% earnings)
+    //.subtitle3
+    if rows3 != null
+        each row in rows3
+          br
+          .subtitle31 #{row.name} 
+          .subtitle31 ➡ $#{Math.round(row.total_sales)}  #{row.month}-#{y}
+          br
+          br
+
+
+        
+    
+            

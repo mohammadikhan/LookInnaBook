@@ -1,0 +1,26 @@
+doctype html
+// This page displays the login page of the database
+html(lang="en")
+  head
+    title Login
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="./css/homePageStyle.css")
+    
+  body(style="background-color: red;" background="/images/cinematicMoving.gif")
+    .topnav
+
+      a.active(href="/") Home          
+      a(href="/register") Create an Account
+
+      
+    h1 Login
+    .container
+      .subtitle Login to your account!
+      .signin-page
+        .form
+         form.search-template(action='/login' method='post')
+            input#username(type="text" name='username' placeholder="Enter your username" required)
+            input#password(type="password" name='password' placeholder="Enter your password" required)
+
+            button(type='submit') Login!
