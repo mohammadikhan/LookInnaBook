@@ -94,7 +94,7 @@ create table track_order(
 	shipping_street_name		varchar(60),
 	shipping_city			varchar(50),
 	shipping_province		varchar(2),
-	shipping_postal_code		varchar(6)
+	shipping_postal_code		varchar(6),
 	status				varchar(30),
 	primary key (order_number),
 	foreign key (username) references users(username)
