@@ -9,7 +9,7 @@ create table publisher_comp (
 	email   			varchar(50),
 	phone_number  			varchar(10),
 	bank_account_number 		varchar(10),
-	percentage			numeric(2,2),
+	percentage			numeric(2,2) default 0.20,
 	primary key (p_id)
 );
 
