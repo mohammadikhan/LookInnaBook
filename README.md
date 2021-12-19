@@ -11,7 +11,7 @@ Refer to my project report for the design and implementation details for my appl
 1. First, make sure you have Node.js installed on your computer. You can install it [here](https://nodejs.org/en/)
 2. Download all the files, SQL files and source code from my project repository by unzipping the zip file and make sure you are in the directory of the unzipped file as that is how you will be running the application.
 3. Open up a SQL editor or pgAdmin and create a new database called: ```book_store_db```
-4. Open up a SQL editor and copy and paste the contents from ```DDL.sql, DataInsert.sql``` and ```Views.sql``` into your SQL editor which will create the tables, insert the sample data and gerenate the views for database respectively. Please do it in this order: create the tables from ```DDL.sql```, insert the data from ```DataInsert.sql``` and insert the views using ``Views.sql``. Additonally you can open the SQL files in pgAdmin or some other SQL editor and run the file. Again, please do it in the order specified as before.
+4. In the new ```book_store_db``` database that you just created, copy and paste the contents from ```DDL.sql, DataInsert.sql``` and ```Views.sql``` into the ```book_store_db``` database which will create the tables, insert the sample data and gerenate the views for database respectively. Please do it in this order: create the tables from ```DDL.sql```, insert the data from ```DataInsert.sql``` and insert the views using ``Views.sql``. Additonally you can open the SQL files in pgAdmin or some other SQL editor and run the file. Again, please do it in the order specified as before.
 5. Connect to the database on your computer by doing the following:
     - Go to lines 44-50 in index.js and you will see the following:
     ```
