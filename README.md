@@ -13,7 +13,7 @@ Refer to my project report for the design and implementation details for my appl
 3. Open up a SQL editor or pgAdmin and create a new database called: ```book_store_db```
 4. In the new ```book_store_db``` database that you just created, copy and paste the contents from ```DDL.sql, DataInsert.sql``` and ```Views.sql``` into the ```book_store_db``` database which will create the tables, insert the sample data and gerenate the views for database respectively. Please do it in this order: create the tables from ```DDL.sql```, insert the data from ```DataInsert.sql``` and insert the views using ``Views.sql``. Additonally you can open the SQL files in pgAdmin or some other SQL editor and run the file. Again, please do it in the order specified as before.
 5. Connect to the database on your computer by doing the following:
-    - Go to lines 44-50 in index.js and you will see the following:
+    - Go to lines 44-50 in ```index.js``` and you will see the following:
     ```
     const client = new Client({
         host: "localhost",
@@ -25,7 +25,7 @@ Refer to my project report for the design and implementation details for my appl
     
     ```       
      - Change any of the following lines such as the host, user, port number, or password in order to connect to the database on your local computer. In most cases, you would just need to change the password that will work on your local computer but if any of the parameters differ on your local computer, PLEASE change it so that you will be able to connect to the database. This is very important. Otherwise you wont be ablet to connect to the database.
-     - Once you have changed the lines in ```const client```, save the file.
+     - Once you have changed the lines in ```const client```, save the  ```index.js``` file.
 
 6. Assuming you are in the directory where you have my project repository/folder and all the files associated with my project, the application can now start.
 7. To install all the dependencies, open up the terminal and change the directory such that you are in the directory that has my project and type: ```npm install```
