@@ -8,7 +8,7 @@ My COMP 3005 Final Project repository. This is a web application that uses Expre
 Refer to my project report for the design and implementation details for my application including my ER-Diagram, Schema Diagram and UI screenshots explaining how application works for the user and owner interface. The report can be found [here](https://drive.google.com/file/d/1k8pJQQgNbVOS28XleliHuaCZubM4SrhS/view?usp=sharing)
 
 # Running the application
-1. First, make sure you have Node.js installed on your computer. You can install it [here](https://nodejs.org/en/)
+1. First, make sure you have Node.js installed on your computer. You can install it [here](https://nodejs.org/en/download/)
 2. Download all the files, SQL files and source code from my project repository by unzipping the zip file and make sure you are in the directory of the unzipped file as that is how you will be running the application.
 3. Open up a SQL editor or pgAdmin and create a new database called: ```book_store_db```
 4. In the new ```book_store_db``` database that you just created, copy and paste the contents from ```DDL.sql, DataInsert.sql``` and ```Views.sql``` into the ```book_store_db``` database which will create the tables, insert the sample data and gerenate the views for database respectively. Please do it in this order: create the tables from ```DDL.sql```, insert the data from ```DataInsert.sql``` and insert the views using ``Views.sql``. Additonally you can open the SQL files in pgAdmin or some other SQL editor and run the file. Again, please do it in the order specified as before.
